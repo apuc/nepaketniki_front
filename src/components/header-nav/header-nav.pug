@@ -1,0 +1,19 @@
+mixin header-nav()
+	+b.header-nav
+		-
+			var links = {
+				'О нас': '#travels',
+				'Расписание': '#schedule',
+				'Отзывы': '#comments',
+				'Фотоотчёты': '/',
+				'Для бизнеса': '/',
+				'Контакты': '/',
+			}
+
+		each value, index in links
+			a(href=value) #{index}
+
+		block
+
+
+	

@@ -1,0 +1,97 @@
+.schedule
+	display: block
+	padding: 0 5rem
+
+	&__title
+		margin-top: 8rem
+		color: #4f4f4f
+		text-align: center
+		font-size: 2.3rem
+		font-family: 'GT Eesti Pro Display', 'monospace'
+		font-weight: 700
+
+	&__proposition
+		width: 55%
+		text-align: center
+		margin: 2rem auto
+		font-size: 1.2rem
+		color: #515050
+		font-family: 'GT Eesti Pro Display', 'monospace'
+		font-weight: 300
+
+		a
+			color: #515050
+			font-weight: bold
+			font-family: 'GT Eesti Pro Display', 'monospace'
+			font-weight: 500
+
+	&__tours
+		width: 100%
+		max-width: 1170px
+		margin: 0 auto
+		margin-top: 1rem
+		display: flex
+		flex-direction: row
+		justify-content: center
+		flex-wrap: wrap
+
+	&__form-wrapper
+		position: relative
+		margin: -1rem 1rem 0 1rem
+		width: 30%
+		min-width: 300px
+		border: 2px solid transparent
+		z-index: 5
+		height: 35rem
+
+
+@media screen and ( max-width: 1400px )
+	.schedule
+		&__tours
+			width: 100%
+
+@media screen and ( max-width: 1200px )
+	.schedule
+		&__proposition
+			width: initial
+		
+
+@media screen and ( max-width: 1000px )
+	.schedule
+		padding: 0 2rem
+		
+		&__tours
+			justify-content: center
+
+		&__form-wrapper
+			margin-top: 4rem
+			width: initial
+			height: 700px
+			width: 45%
+
+
+			.circle
+				top: -1rem
+
+			.hash-tag
+				display: none
+
+@media screen and ( max-width: 676px )
+	.schedule
+		&__title
+			margin-top: 0
+
+
+@media screen and ( max-width: 600px )
+	.schedule
+
+		&__form-wrapper
+			height: 550px
+
+@media screen and ( max-width: 500px )
+	.schedule
+		padding: 0 2rem
+
+		&__proposition
+			width: 85%
+	

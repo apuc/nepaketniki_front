@@ -1,0 +1,28 @@
+include ../comments-comment/comments-comment
+
+mixin comments()
+	+b.comments#comments
+		h2.comments__title Сомневаешься стоит ли путешествовать с нами? <br/> Тогда читай, что пишут о нас
+
+		-
+			var page = 1
+			var pages = 12
+
+		.comments__pagination
+			button &lt;
+			span.comments__current-page #{page} из #{pages}
+			button &gt;
+
+		-
+			var comments = [
+				{ name: 'Карина и Андрей', instagramLinks:['karina_duvanova', 'andy_slipp'], avatar:'assets/images/comment-1.png', text: 'Это был самый крутой отдых! Вы - просто молодцы! Программа тура была не стандартной туристической и при желании группа могла внести ещё и свои коррективы. Т.е. мое нелюбимое - в 7 утра стоять перед гостиницей с сухим пайком и ждать автобус не происходило...'},
+				{ name: 'Людмила', instagramLinks:['mng.milka'], avatar: 'assets/images/comment-2.png', text: 'Ребятки, формат вашей программы оказался просто идеальным для меня (Я собственно на это и рассчитывала) Этот формат я называю «взять и выгулять», когда ты не паришься о подробностях и деталях планирования поездки, ты просто доверяешь себя профессионалам..., расслабляешься и наслаждаешься путешествием на полную'},
+				{ name: 'Галина', instagramLinks:['galochka115'], avatar:'assets/images/comment-3.png', text:'Ребята, спасибо вам большое за поездку! Я сама люблю составлять маршруты и всё тщательно планировать, но как же приятно иногда ни о чем не думать и довериться хорошим организаторам!)) До сих пор закрываю глаза и у меня пряничные домики перед глазами))...'},
+			]
+
+		.comments__list
+			each comment, index in comments
+				+comments-comment(comment, index)
+
+		block
+

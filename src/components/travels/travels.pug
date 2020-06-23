@@ -1,0 +1,66 @@
+include ../button/button
+include ../advantage/advantage
+
+mixin travels()
+	+b.travels#travels
+		block
+
+		.travels__heading
+			h3.travels__title Открой новый формат путешествий вместе с нами!
+			p.travels__news Подпишитесь и получите чек-лист топ непакетных направлений <span>бесплатно</span>
+			img.travels__balloon(src='assets/images/balloon.png' alt='')
+			
+		.travels__logo
+			img(src="assets/images/nepaketniki.png", alt="")
+
+		-
+			var advantages = [
+				{
+					title: 'Продуманность',
+					description: 'Самой большой вашей проблемой в туре будет выбор блюда в ресторане, и даже с этим мы поможем:)',
+					img: 'assets/images/item-1.png',
+				},
+
+				{
+					title: 'Программа',
+					description: 'Мы за идеальный микс активностей и релакса. У нас нет активностей нон-стоп, но и заскучать вам тоже не дадим.',
+					img: 'assets/images/item-2.png',
+				},
+
+				{
+					title: 'Компания',
+					description: 'Не знаем, как так получается, но с нами всегда ездят очень интересные, весёлые, успешные и перспективные ребята',
+					img: 'assets/images/item-3.png',
+				},
+
+				{
+					title: 'Фотографии',
+					description: 'Не беспокойтесь - мы сделаем вам ОЧЕНЬ классные фотографии!',
+					img: 'assets/images/item-4.png',
+				},
+
+				{
+					title: 'Еда',
+					description: 'В наших турах вкусно! Еда для нас важная эстетическая и культурная часть любой поездки. Мы тщательно выбираем кафе по нашему маршруту',
+					img: 'assets/images/item-5.png',
+				},
+
+				{
+					title: 'Нет скрытых затрат',
+					description: 'Мы всегда включаем в стоимость тура все активности, которые дают полное представление о месте, в которое мы едем',
+					img: 'assets/images/item-6.png',
+				},
+			]
+
+		.advantages
+			each advantage, index in advantages
+				+advantage(advantage, index)
+				
+
+		.travels__subscribe
+			p
+				|Вы можете путешествовать вместе с нами онлайн - в сториз и постах нашего 
+				|<a href="/">блога в Инстаграм</a>, 
+				|а можете отправиться в незабываемое приключение вместе с нами.
+
+			+button('Подписаться')

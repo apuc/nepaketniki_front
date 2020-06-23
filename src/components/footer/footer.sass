@@ -1,0 +1,101 @@
+.footer
+	height: 700px
+	margin-top: -25rem
+	padding-bottom: 10rem
+
+	background-image: url('../images/footer-bg.png')
+	background-repeat: no-repeat
+	background-position: center
+
+	&__container
+		width: 100%
+		height: 100%
+		max-width: 1170px
+		margin: 0 auto
+		display: flex
+		justify-content: flex-end
+		align-items: flex-end
+
+	&__text
+		margin: 0 3rem
+
+	.travel-format-text
+		font-size: 2.2rem
+		margin-left: -160px
+		margin-top: -40px
+		font-family: sans-serif
+
+	&__contact-info
+		margin-right: -30px
+
+	.contacts__phone
+		i
+			box-shadow: -5px 5px 10px #bebebe
+
+	.contacts__number
+			p
+				color: #d4d4d4
+				
+@media screen and ( max-width: 1400px )
+	.footer
+		&__contact-info
+			margin-right: 0
+	
+
+@media screen and ( max-width: 1000px )
+	.footer
+		margin-top: -20rem
+		padding: 8rem 3rem
+
+		&__container
+			flex-direction: column
+			align-items: center
+
+		.travel-format-text
+			margin-left: 0
+
+		.search-bar
+			display: none
+
+@media screen and ( max-width: 768px )
+	.footer
+		padding: 6rem 3rem
+
+		&__text
+			margin: initial
+
+		.travel-format-text
+			text-align: center
+			margin-left: 0
+			margin-top: 0
+
+		.search-bar
+			margin-top: 2rem
+
+		.contacts__phone
+			justify-content: center
+	
+@media screen and ( max-width: 676px )
+	.footer
+
+		margin-top: -20rem
+
+		.traveling-text
+			display: none
+
+		.travel-format-text
+			font-size: 2rem
+
+		.contacts__phone
+			i
+				box-shadow: -5px 5px 12px #ffbb29
+
+@media screen and ( max-width: 420px )
+	.footer
+		padding: 7rem 1rem
+
+		margin-top: -18rem
+
+		.travel-format-text
+			font-size: 1.8rem
+		

@@ -1,0 +1,51 @@
+.contacts
+	display: flex
+	margin: 1.6rem 0
+
+	&__phone
+		display: flex
+		margin-left: 1rem
+		align-self: center
+
+		i
+			width: 2.5rem
+			height: 2.5rem
+
+			margin: .2rem
+			padding: .6rem .8rem
+
+			font-size: 1.2rem
+			background-color: #ffd207
+			color: #4f4f4f
+
+			border-radius: 50%
+
+	&__number
+		padding: .3rem .5rem
+
+		strong
+			color: #363636
+			font-size: 1rem
+			font-family: 'Muller', 'serif'
+			font-weight: 900
+
+		p
+			color: #ffffff
+			font-size: .9rem
+			font-family: 'Muller', 'serif'
+			font-weight: 500
+
+@media screen and ( max-width: 676px )
+	.contacts
+		margin: initial
+		display: flex
+		flex-direction: column
+		margin: 1rem
+
+@media screen and ( max-width: 676px )
+	.contacts
+		&__number
+			strong
+				font-size: .9rem
+			p
+				.8rem

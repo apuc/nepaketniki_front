@@ -1,0 +1,18 @@
+include ../contacts/contacts
+include ../search-bar/search-bar
+
+mixin footer()
+
+	+b.footer
+
+		.footer__container
+			.footer__text
+				span.traveling-text traveling
+				p.travel-format-text Открой для себя новый <br />формат путешествий
+
+			.footer__contact-info
+				+contacts()
+				+search-bar('Контакты Nepaketniki')
+
+			block
+

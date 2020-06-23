@@ -1,0 +1,37 @@
+include ../header-nav/header-nav
+include ../contacts/contacts
+include ../button/button
+include ../hash-tag/hash-tag
+include ../search-bar/search-bar
+include ../menu/menu
+
+mixin header()
+	+b.header
+
+		+menu()
+
+		.header__nav-info#headerNavInfo
+			+header-nav()
+			+contacts()
+
+		.header__main
+			.header__text
+				p.header__author-tours <strong>Мы создаём авторские туры</strong> в самые красивые места нашей планеты - <br />Бали, Японию, Эльзас, Каппадокию. 
+				h2.header__travel-format-text Открой для себя новый формат путешествий
+				p.header__proposition-text
+					|Ты можешь путешествовать вместе с нами онлайн - в сториз и постах нашего 
+					| <a href="/">блога в Инстаграм</a>, 
+					|а можешь отправиться в незабываемое приключение вместе с нами.
+
+				.header__news-wrapper
+					a(href='#schedule')
+						+button('Посмотреть туры')
+					p.header__news Хочешь получить новости о наших турах первым? <a href='/'>Напиши нам</a>
+
+				+hash-tag()
+
+			.header__traveling
+				span.traveling-text traveling
+				+search-bar('как правильно отдыхать?')
+
+			block

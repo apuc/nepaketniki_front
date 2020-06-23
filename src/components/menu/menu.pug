@@ -1,0 +1,22 @@
+mixin menu()
+	+b.menu#menu
+
+		.menu__icon#menuIcon
+			i.fa.fa-bars
+
+		-
+			var links = {
+				'О нас': '#travels',
+				'Расписание': '#schedule',
+				'Отзывы': '#comments',
+				'Фотоотчёты': '/',
+				'Для бизнеса': '/',
+				'Контакты': '/',
+			}
+
+		.menu__list#menuList
+			each value, index in links
+				.menu__item
+					a(href=value) #{index}
+					
+			

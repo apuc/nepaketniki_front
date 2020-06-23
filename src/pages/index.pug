@@ -1,0 +1,16 @@
+extends ../components/layout-default/layout-default
+include ../components/header/header
+include ../components/schedule/schedule
+include ../components/travels/travels
+include ../components/comments/comments
+include ../components/footer/footer
+
+block head
+    - var pageTitle = 'Nepaketniki';
+
+block content
+    +header()
+    +schedule()
+    +travels()
+    +comments()
+    +footer()

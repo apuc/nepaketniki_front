@@ -1,0 +1,8 @@
+mixin contacts-socials()
+	+b.contacts-socials
+		each value in ['1', '2', '3']
+			.social
+				img(src='assets/images/social-'+value+'.png')
+				.social--inner-hover
+		block
+

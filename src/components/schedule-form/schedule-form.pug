@@ -1,0 +1,20 @@
+include ../circle/circle
+
+mixin schedule-form()
+	+b.schedule-form
+		+circle('medium')
+		.schedule-form__inside
+
+			.schedule-form__content
+				h3.schedule-form__title Обязательно <br />подпишись!
+				p.schedule-form__news Получай новости о наших новых турах, скидках первым! Это важно!
+
+				form.schedule-form__feedback
+					input(type="text" placeholder="Введите имя")
+					input(type="text" placeholder="Введите телефон")
+
+					button(type="submit") Подписаться
+
+				h4.schedule-form__instagram Instagram
+
+				block

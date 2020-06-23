@@ -1,0 +1,15 @@
+include ../contacts-socials/contacts-socials
+
+mixin contacts()
+	+b.contacts
+	
+		+contacts-socials()
+
+		.contacts__phone
+			i.fa.fa-phone
+			.contacts__number
+				strong +38 099 490 24 54
+				p перезвоните мне!
+
+		block
+

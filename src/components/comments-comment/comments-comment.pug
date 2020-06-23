@@ -1,0 +1,21 @@
+mixin comments-comment(comment, index)
+	+b.comments-comment(class=index!==1&&'upper')
+		.comments-comment__border-inside
+		
+		.comment__main
+			h4.comment__name #{comment.name}
+
+			.comment__instagram
+				i.fa.fa-instagram
+				each link, index in comment.instagramLinks
+					-var resultLink = 'http::/instagram.com/' + link
+					if index === 0
+						a.comment__link(href=resultLink) #{link}
+					else
+						span.comment__link-breaker |
+						a.comment__link(href=resultLink)  #{link}
+						
+			p.comment__text #{comment.text} 
+			
+		img.comment__avatar(src=comment.avatar, alt="")
+		block

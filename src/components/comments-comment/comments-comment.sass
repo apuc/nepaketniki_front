@@ -1,0 +1,92 @@
+.comments-comment
+	display: flex
+	position: relative
+	flex-direction: column
+	align-items: start
+	width: 320px
+	margin: 5rem 2rem
+	font-family: 'Muller', 'monospace'
+	font-weight: 300
+
+	&.upper
+		margin-top: -3rem
+
+	i
+		color: #c1c1c1
+
+	&__border-inside
+		position: absolute
+		top: -10px
+		left: -5px
+		bottom: 30px
+		right: -5px
+		border: 2px solid transparent
+		border-image: linear-gradient(#fdf7ee 25%, transparent 60%)
+		border-image-slice: 1
+		z-index: -1
+		 
+.comment
+
+	&__main
+		padding: .5rem
+
+	&__name
+		color: #515050
+		font-size: 1.2rem
+
+	&__instagram
+		display: flex
+		flex-direction: row
+		padding: .5rem .1rem
+		
+		*
+			margin: 0 .2rem
+
+
+	&__link
+		color: #c1c1c1
+		font-size: .9rem
+		display: inline
+
+		&-breaker
+			color: #c1c1c1
+
+	&__text
+		color: #666666
+
+	&__avatar
+		margin-top: 2rem
+		margin-left: -10px
+		height: 250px
+		width: 340px
+
+	&__avatar
+
+@media screen and ( max-width: 1200px)
+	.comments-comment
+		width: 720px
+		margin: 2rem
+
+		&.upper
+			margin-top: 2rem
+
+	.comment
+
+		&__avatar
+			margin: 1rem auto
+
+	
+@media screen and ( max-width: 768px)
+	.comments-comment
+		width: 480px
+
+@media screen and ( max-width: 500px )
+	.comments-comment
+		width: 280px
+	
+	.comment
+		&__text
+			font-size: .9rem
+
+		&__avatar
+			width: 280px

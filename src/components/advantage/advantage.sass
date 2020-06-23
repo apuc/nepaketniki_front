@@ -1,0 +1,57 @@
+.advantage
+	display: flex
+	width: 40%
+	padding: 1rem
+	font-family: 'GT Eesti Pro Display', 'monospace'
+	font-weight: 400
+
+	&__logo
+		img
+			position: absolute
+			z-index: 10
+
+	&__inside
+		width: 60%
+		margin: 1rem 2rem
+		display: flex
+
+	&__text
+		margin: 0 1.5rem
+		color: #626262
+
+		h3
+			font-family: 'GT Eesti Pro Display', 'monospace'
+			font-weight: 900
+
+		p
+			font-family: 'GT Eesti Pro Display', 'monospace'
+			font-weight: 300
+			margin-top: 1rem
+
+	&.column-left
+		justify-content: flex-end
+
+	
+	&.column-right
+		justify-content: flex-start
+
+
+@media screen and ( max-width: 1400px )
+	.advantage
+		width: 50%
+
+@media screen and ( max-width: 1400px )
+	.advantage
+		&__inside
+			width: 70%
+
+@media screen and ( max-width: 768px )
+	.advantage
+		width: 100%
+
+		&.column-left, &.column-right
+			justify-content: center
+
+		&__inside
+			width: 100%
+	

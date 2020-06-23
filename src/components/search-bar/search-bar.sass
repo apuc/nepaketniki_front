@@ -1,0 +1,50 @@
+.search-bar
+	display: flex
+	position: relative
+
+	input, i
+		padding: .7rem 1rem
+
+	input
+		color: #333333
+		position: relative
+		border: 10px solid transparent
+		border-image: linear-gradient(90deg, #fec600, #ffda4a)
+		border-image-slice: 1
+		width: 25rem
+		border-right: none
+		font-family: 'Muller', 'serif'
+		font-weight: 400
+		background-color: #ffffff
+		outline: none
+		font-size: 1rem
+		font-family: Muller, monospace
+		font-weight: 400
+
+	i
+		color: #363636
+		position: relative
+		border: 10px solid #ffda4a
+		font-size: 1.3rem
+		margin-left: -30px
+		background-color: #ffffff
+
+	.times
+		position: absolute
+		height: 50px
+		margin-top: 10px
+		margin-left: 360px
+
+		i.fa-times
+			color: #afafaf
+			border: none
+
+	.triangle
+		border: 30px solid transparent
+		border-left: 30px solid #ffda4a
+
+@media screen and ( max-width: 500px )
+	.search-bar
+		input
+			width: 240px
+	

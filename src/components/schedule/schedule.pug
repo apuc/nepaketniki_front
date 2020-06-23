@@ -1,0 +1,64 @@
+include ../schedule-tour/schedule-tour
+include ../schedule-form/schedule-form
+include ../hash-tag/hash-tag
+
+mixin schedule()
+	+b.schedule#schedule
+		h3.schedule__title Расписание авторских туров
+
+		p.schedule__proposition 
+			|Вы можете путешествовать вместе с нами онлайн - в сториз и постах нашего 
+			|<a href='/'>блога в Инстаграм</a>, 
+			|а можете отправиться в незабываемое приключение вместе с нами.
+
+		-
+			var tours = [
+				{ title: 'Каппадокия', img: 'assets/images/tour-1.png', date: 'сентябрь - октябрь 2020', 
+				description: 'Полёт на воздушном шаре над марсианскими пейзажами, долины и каньоны, фотосессии в разлетающихся платьях на террасе бутик-отеля, прогулка на квадроциклах и лошадях.',
+				price: 850,
+				avia: true
+				},
+
+				{ title: 'Бали', subtitle: 'и Нуса Пенида', img: 'assets/images/tour-2.png', date: '16-28 октября 2020', 
+				description: '11 дней в раю и месте силы. Океан, райские пляжи, мощные водопады, восхождение на вулкан, спа, рестораны в джунглях и джакузи выше облаков.',
+				price: 1620,
+				avia: true
+				},
+
+				{ title: 'Бали', subtitle: 'и Нуса Пенида', img: 'assets/images/tour-3.png', date: '27 октября - 6 ноября 2020', 
+				freePlaces: 8,
+				description: '9 дней в раю и месте силы. Океан, райские пляжи, мощные водопады, восхождение на вулкан, спа, рестораны в джунглях и джакузи выше облаков.',
+				price: 1290,
+				avia: true
+				},
+
+				{ title: 'Япония:', subtitle: 'красные клёны', img: 'assets/images/tour-4.png', date: '12-20 ноября 2020',
+				freePlaces: 5,
+				description: 'Неизведанная и таинственная, абсолютно другая и уникальная. Ночной Токио, ручные олени в Наре, древний Киото со знакомством с гейшей, гора Фудзи в закури...',
+				price: 2100,
+				avia: true
+				},
+
+				{ title: 'Рождественский Эльзас', img: 'assets/images/tour-5.png', date: 'декабрь 2021', 
+				description: '5 дней в нетипичной Франции и рождественской сказке. Самые красивые деревушки, отель в виноградниках, средневековые ярмарки и неповторимые эльзасские ',
+				price: 1290,
+				avia: true
+				},
+			]
+			
+		.schedule__tours
+			each tour in tours
+				+schedule-tour(tour)
+
+			.schedule__form-wrapper
+				+hash-tag()
+				+schedule-form()
+
+
+
+
+		
+
+		block
+
+		

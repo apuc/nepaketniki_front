@@ -1,0 +1,132 @@
+.travels
+	display: block
+	margin-top: 10rem
+
+	&__heading
+		display: flex
+		justify-content: center
+		align-items: center
+		padding-left: 5rem
+
+	&__title
+		color: #4f4f4f
+		width: 500px
+		font-size: 2.2rem
+		font-family: 'GT Eesti Pro Display', 'serif'
+		font-weight: 700
+
+	&__news
+		color: #717171
+		width: 185px
+		font-size: .9rem
+		font-family: 'Muller', 'serif'
+		font-weight: 200
+		margin-left: 3rem
+
+		span
+			font-family: 'Muller', 'serif'
+			font-weight: 900
+
+
+	&__balloon
+		margin-left: 5rem
+		width: 175px
+		height: 223px
+
+	&__logo
+		margin-top: 1rem
+		
+		img
+			display: block
+			margin: 0 auto
+			height: 100px
+
+	.advantages
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		width: 80%
+		margin: 3rem auto 0 auto
+
+	&__subscribe
+		display: flex
+		justify-content: center
+		margin-top: 4rem
+
+		p
+			width: 30%
+			margin-right: 4rem
+			color: #515050
+			font-family: 'GT Eesti Pro Display Light', 'monospace'
+
+			a
+				color: #515050
+				font-weight: bold
+				font-family: 'GT Eesti Pro Display', 'monospace'
+				font-weight: 700
+
+@media screen and ( max-width: 1400px )
+	.travels
+		.advantages
+			width: 100%
+
+@media screen and ( max-width: 1170px )
+	.travels
+
+		&__heading
+			padding-left: 0
+
+		&__balloon
+			display: none
+
+
+@media screen and ( max-width: 1000px )
+	.travels
+
+		&__logo
+			img
+				width: 740px
+				height: 100px
+
+@media screen and ( max-width: 768px )
+	.travels
+		margin-top: 2rem
+		
+		&__heading
+			flex-direction: column
+
+		&__balloon
+			display: none
+
+
+		&__title, &__news
+			margin-top: 1rem
+			width: 400px
+
+		&__logo
+			img
+				width: 400px
+				height: 60px
+
+		&__subscribe
+			flex-direction: column
+			align-items: center
+
+			p
+				width: 70%
+				text-align: center
+				margin-right: 0
+
+			button
+				margin-top: 2rem
+
+@media screen and ( max-width: 400px )
+	.travels
+
+		&__title, &__news
+			width: 260px
+
+		&__logo
+			img
+				width: 280px
+				height: 40px

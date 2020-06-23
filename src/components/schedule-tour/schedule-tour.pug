@@ -1,0 +1,45 @@
+include ../circle/circle
+include ../button/button
+
+mixin schedule-tour(tour)
+	+b.schedule-tour
+		.schedule-tour__inside
+			.schedule-tour__heading 
+				.schedule-tour__logo
+					+circle('small')
+					.schedule-tour__title
+						h3 #{tour.title}
+						if tour.subtitle
+							h3 #{tour.subtitle}
+						else
+							h3 #{''}
+				img(src=tour.img, alt="" class='schedule-tour__image')
+
+			-
+				function getPlacesString(places) {
+					if (places % 100 < 20 && places > 4) {
+						return 'свободных мест';
+					} else if (places % 10 === 1) {
+						return 'свободное место';
+					} else if (places % 10 > 1 && places % 10 < 5) {
+						return 'свободных места';
+					}
+				}
+					
+			
+			.schedule-tour__info
+				p.schedule-tour__date #{tour.date}
+				if tour.freePlaces
+					p.schedule-tour__free-places (#{tour.freePlaces} #{getPlacesString(tour.freePlaces)})
+				else
+					p #{''}
+
+			p.schedule-tour__description #{tour.description}
+			if tour.avia
+				p.schedule-tour__price #{tour.price} €
+			else
+				p.schedule-tour__price #{tour.price} € + авиаперелёт
+
+			+button('Программа тура')
+				
+			block
