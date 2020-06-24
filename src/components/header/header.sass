@@ -3,7 +3,7 @@
 	background-image: url('../images/header-bg.png')
 	background-repeat: no-repeat
 	background-position: center
-	height: 707px
+	height: 706px
 
 	.hash-tag
 		margin-top: 3rem
@@ -13,15 +13,16 @@
 		height: 600px
 
 	&__text
-		width: 58.333333%
-		display: flex
-		flex-direction: column
-		align-items: center
+		width: 50%
+		margin-left: 8.333333%
+		padding-left: 2.5rem
 
 	&__author-tours
+		margin: 0 auto
+		margin-top: 1.5rem
 		color: #b3b2b2
 		width: 320px
-		font-size: 1rem
+		font-size: 15px
 		font-family: 'GT Eesti Pro Display', 'monospace'
 		font-weight: 400
 
@@ -32,7 +33,7 @@
 
 
 	&__travel-format-text
-		margin-top: 7rem
+		margin: 7rem auto 0 auto
 		color: #4f4f4f
 		width: 420px
 		font-size: 2.2rem
@@ -40,10 +41,11 @@
 		font-weight: 700
 
 	&__proposition-text
-		margin-top: 4rem
+		margin-top: 3.5rem
+		margin-left: 1rem
 		color: #515050
-		width: 440px
-		font-size: 1.2rem
+		width: 430px
+		font-size: 18px
 		font-family: 'GT Eesti Pro Display', 'monospace'
 		font-weight: 300
 
@@ -53,10 +55,10 @@
 			font-family: 'GT Eesti Pro Display'
 			font-weight: 700
 
-
 	&__news
 		color: #717171
-		width: 170px
+		min-width: 175px
+		max-width: 175px
 		font-size: .9rem
 		margin: .3rem 1rem
 		font-family: 'Muller', 'serif'
@@ -68,14 +70,16 @@
 			color: #717171
 
 		&-wrapper
-			margin-top: 2rem
+			margin-top: 1.5rem
+			margin-left: 2rem
 			display: flex
+			width: 100%
 			
 	&__traveling
 		display: flex
 		flex-direction: column
 		justify-content: flex-end
-		margin-left: 8rem
+		margin-left: 4rem
 		height: 600px
 
 		.traveling-text
@@ -99,9 +103,10 @@
 		&__text
 			margin-left: 1rem
 
-		.contacts__phone
-			i
-				box-shadow: -5px 5px 12px #bebebe
+		&__news-wrapper
+			a
+				button
+					font-size: .9rem
 	
 
 @media screen and ( max-width: 768px )
@@ -112,12 +117,19 @@
 			flex-direction: column
 			align-items: center
 
+		&__text
+			margin-left: 0
+			padding-left: 0
+
 		&__travel-format-text
 			margin-top: 3rem
 
 		.contacts__number
 			p
 				color: #d4d4d4
+
+			i
+				box-shadow: -5px 5px 12px #bebebe
 
 		.button
 			button

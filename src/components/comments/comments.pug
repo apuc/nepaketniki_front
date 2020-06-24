@@ -9,9 +9,9 @@ mixin comments()
 			var pages = 12
 
 		.comments__pagination
-			button &lt;
+			button.comments__button &lt;
 			span.comments__current-page #{page} из #{pages}
-			button &gt;
+			button.comments__button.comments__button--active &gt;
 
 		-
 			var comments = [

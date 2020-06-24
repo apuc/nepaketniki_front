@@ -36,9 +36,9 @@ mixin schedule-tour(tour)
 
 			p.schedule-tour__description #{tour.description}
 			if tour.avia
-				p.schedule-tour__price #{tour.price} €
-			else
 				p.schedule-tour__price #{tour.price} € + авиаперелёт
+			else
+				p.schedule-tour__price #{tour.price} €
 
 			+button('Программа тура')
 				
