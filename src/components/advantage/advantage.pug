@@ -1,7 +1,7 @@
 include ../circle/circle
 
 mixin advantage(advantage, index)
-	+b.advantage(class=index % 2===0?'column-left':'column-right')
+	+b.advantage(class=index % 2===0?'column-left':'column-right mobile-hidden')
 		.advantage__inside
 			.advantage__logo
 				img(src=advantage.img, alt="")

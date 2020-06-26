@@ -120,13 +120,40 @@
 			button
 				margin-top: 2rem
 
-@media screen and ( max-width: 400px )
+@media screen and ( max-width: 420px )
 	.travels
+		max-width: 282px
+		width: 100%
+		margin: 6.5rem auto 0 auto
 
-		&__title, &__news
-			width: 260px
+		&__heading
+			align-items: flex-start
+			position: relative
+
+		&__title
+			width: 220px
+			font-size: 19px
+
+		&__news
+			width: 150px
+			font-size: 12px
+			order: -1
+			margin-left: 0
+
+		&__balloon
+			display: block
+			position: absolute
+			margin: 0
+			top: -6rem
+			right: -5rem
+
 
 		&__logo
 			img
-				width: 280px
-				height: 40px
+				width: 283px
+				height: 30px
+
+		&__subscribe
+			p
+				width: 95%
+				font-size: 15px

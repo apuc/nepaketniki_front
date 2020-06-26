@@ -1,0 +1,12 @@
+mixin tour-logo(tour)
+	+b.tour-logo
+		.tour-logo__wrapper
+			+circle('small')
+			.tour-logo__title
+				h3 #{tour.title}
+				if tour.subtitle
+					h3 #{tour.subtitle}
+				else
+					h3 #{''}
+		img(src=tour.img, alt="" class='tour-logo__image')
+

@@ -1,15 +1,12 @@
+include ../schedule-heading/schedule-heading
 include ../schedule-tour/schedule-tour
 include ../schedule-form/schedule-form
 include ../hash-tag/hash-tag
 
 mixin schedule()
 	+b.schedule#schedule
-		h3.schedule__title Расписание авторских туров
-
-		p.schedule__proposition 
-			|Вы можете путешествовать вместе с нами онлайн - в сториз и постах нашего 
-			|<a href='/'>блога в Инстаграм</a>, 
-			|а можете отправиться в незабываемое приключение вместе с нами.
+		
+		+schedule-heading
 
 		-
 			var tours = [
@@ -47,8 +44,8 @@ mixin schedule()
 			]
 			
 		.schedule__tours
-			each tour in tours
-				+schedule-tour(tour)
+			each tour, index in tours
+				+schedule-tour(tour, index)
 
 			.schedule__form-wrapper
 				+hash-tag()

@@ -21,6 +21,7 @@
 		font-size: 1.2rem
 		background-color: #fbfbfb
 		border: none
+		outline: none
 
 		&:hover,&--active
 			background-color: #fcda3a
@@ -43,13 +44,20 @@
 			flex-direction: column
 			align-items: center
 
+
+@media screen and ( max-width: 1000px )
+	.comments
+		&__title
+			width: 90%
+			margin-left: auto
+			margin-right: auto
+
 @media screen and ( max-width: 500px )
 	.comments
 		&__title
-			font-size: 1.8rem
-			width: 80%
+			font-size: 25px
+			width: 95%
 			margin: 1rem auto
 
 		&__pagination
 			margin-top: 2rem
-	

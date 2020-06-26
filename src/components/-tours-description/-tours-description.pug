@@ -1,0 +1,15 @@
+include ../-tours-visa/-tours-visa
+
+mixin -tours-description(tour)
+	+b.-tours-description
+	
+		p.-tours-description__main
+			|#{tour.description}
+		
+		p.-tours-description__weather
+			|<strong>Сложность поездки и погода:</strong> #{tour.weather}
+
+		p.-tours-description__places
+			|Количество мест: #{tour.places}
+
+		+-tours-visa(tour.visa)

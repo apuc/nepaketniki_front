@@ -1,0 +1,11 @@
+include ../menu/menu
+include ../header-nav-info/header-nav-info
+include ../schedule-heading/schedule-heading
+
+mixin -tours-header()
+	+b.-tours-header
+		.container
+			+menu()
+			+header-nav-info()
+			
+			+schedule-heading()

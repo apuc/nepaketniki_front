@@ -1,5 +1,4 @@
-include ../header-nav/header-nav
-include ../contacts/contacts
+include ../header-nav-info/header-nav-info
 include ../button/button
 include ../hash-tag/hash-tag
 include ../search-bar/search-bar
@@ -11,9 +10,7 @@ mixin header()
 
 			+menu()
 
-			.header__nav-info#headerNavInfo
-				+header-nav()
-				+contacts()
+			+header-nav-info()
 
 			.header__main
 				.header__text

@@ -1,0 +1,10 @@
+include ../tour-logo/tour-logo
+include ../-tours-info/-tours-info
+include ../-tours-description/-tours-description
+
+mixin -tours-item(tour)
+	+b.-tours-item
+		+tour-logo(tour)
+		+-tours-info(tour)
+		+-tours-description(tour)
+		

@@ -1,0 +1,19 @@
+include ../button/button
+
+mixin -tours-info(tour)
+	+b.-tours-info
+
+		.-tours-info__dates
+			each date in tour.dates
+				p.-tours-info__date
+					|#{date}
+
+		if tour.avia
+			p.-tours-info__price #{tour.price} евро + авиаперелёт
+		else
+			p.-tours-info__price #{tour.price} евро
+
+		p.-tours-info__discount-price
+			|#{tour.discountPrice} евро - до #{tour.discountLimit}
+
+		+button('Программа тура')

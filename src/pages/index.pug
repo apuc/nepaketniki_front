@@ -5,6 +5,9 @@ include ../components/travels/travels
 include ../components/comments/comments
 include ../components/footer/footer
 
+include ../components/-tours-header/-tours-header
+include ../components/-tours-list/-tours-list
+
 block head
     - var pageTitle = 'Nepaketniki';
 
@@ -14,3 +17,7 @@ block content
     +travels()
     +comments()
     +footer()
+    //- +-tours-header()
+    //- +-tours-list()
+    //- +comments()
+    //- +footer()

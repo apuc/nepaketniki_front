@@ -1,5 +1,20 @@
 mixin comments-comment(comment, index)
-	+b.comments-comment(class=index!==1&&'upper')
+
+	-
+		var classes = ''
+		if( index !== 0 ) {
+			if(classes.length !== 0) 
+				classes += ' '
+			classes += 'mobile-hidden'
+		}
+		if( index !== 1 ) {
+			if(classes.length !== 0) 
+				classes += ' '
+			classes += 'upper'
+		}
+			
+	
+	+b.comments-comment(class=classes)
 		.comments-comment__border-inside
 		
 		.comment__main

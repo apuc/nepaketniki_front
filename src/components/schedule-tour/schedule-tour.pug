@@ -1,19 +1,12 @@
 include ../circle/circle
 include ../button/button
+include ../tour-logo/tour-logo
 
-mixin schedule-tour(tour)
-	+b.schedule-tour
+mixin schedule-tour(tour, index)
+	+b.schedule-tour(class=index>1?'mobile-hidden':'')
 		.schedule-tour__inside
 			.schedule-tour__heading 
-				.schedule-tour__logo
-					+circle('small')
-					.schedule-tour__title
-						h3 #{tour.title}
-						if tour.subtitle
-							h3 #{tour.subtitle}
-						else
-							h3 #{''}
-				img(src=tour.img, alt="" class='schedule-tour__image')
+				+tour-logo(tour)
 
 			-
 				function getPlacesString(places) {
