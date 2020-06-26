@@ -2,7 +2,11 @@ mixin menu()
 	+b.menu#menu
 
 		.menu__icon#menuIcon
-			i.fa.fa-th
+			- var squares = [1,2,3,4,5,6,7,8,9]
+
+			.squares
+				each square in squares
+					.square
 
 		-
 			var links = {

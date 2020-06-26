@@ -10,18 +10,30 @@
   </head>
   <body>
     <div class="header">
-      <div class="container">
-        <div class="menu" id="menu">
-          <div class="menu__icon" id="menuIcon"><i class="fa fa-th"></i></div>
-          <div class="menu__list" id="menuList">
-            <div class="menu__item"><a href="#travels">О нас</a></div>
-            <div class="menu__item"><a href="#schedule">Расписание</a></div>
-            <div class="menu__item"><a href="#comments">Отзывы</a></div>
-            <div class="menu__item"><a href="/">Фотоотчёты</a></div>
-            <div class="menu__item"><a href="/">Для бизнеса</a></div>
-            <div class="menu__item"><a href="/">Контакты</a></div>
+      <div class="menu" id="menu">
+        <div class="menu__icon" id="menuIcon">
+          <div class="squares">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
           </div>
         </div>
+        <div class="menu__list" id="menuList">
+          <div class="menu__item"><a href="#travels">О нас</a></div>
+          <div class="menu__item"><a href="#schedule">Расписание</a></div>
+          <div class="menu__item"><a href="#comments">Отзывы</a></div>
+          <div class="menu__item"><a href="/">Фотоотчёты</a></div>
+          <div class="menu__item"><a href="/">Для бизнеса</a></div>
+          <div class="menu__item"><a href="/">Контакты</a></div>
+        </div>
+      </div>
+      <div class="container">
         <div class="header__nav-info" id="headerNavInfo">
           <div class="header-nav"><a href="#travels">О нас</a><a href="#schedule">Расписание</a><a href="#comments">Отзывы</a><a href="/">Фотоотчёты</a><a href="/">Для бизнеса</a><a href="/">Контакты</a>
           </div>
@@ -328,9 +340,26 @@
     </div>
     <div class="comments" id="comments">
       <h2 class="comments__title">Сомневаешься стоит ли путешествовать с нами? <br/> Тогда читай, что пишут о нас</h2>
+      <script type="text/javascript">
+        var page = 1
+        var pages = 12
+
+        function prevPage(page) {
+          if(page-1 > 0) {
+            page = page -1
+          }
+        }
+
+        function nextPage(page) {
+          if(page + 1 <= pages) {
+            page = page + 1
+          }	
+        }
+
+      </script>
       <div class="comments__pagination">
-        <button class="comments__button">&lt;</button><span class="comments__current-page">1 из 12</span>
-        <button class="comments__button comments__button--active">&gt;</button>
+        <button class="comments__button" id="prevPage" onclick="prevPage(undefined)">&lt;</button><span class="comments__current-page"> из </span>
+        <button class="comments__button comments__button--active" id="nextPage" onclick="nextPage(undefined)">&gt;</button>
       </div>
       <div class="comments__list">
         <div class="comments-comment upper">

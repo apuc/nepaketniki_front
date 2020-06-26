@@ -1,0 +1,15 @@
+extends ../components/layout-default/layout-default
+include ../components/comments/comments
+include ../components/footer/footer
+
+include ../components/-tours-header/-tours-header
+include ../components/-tours-list/-tours-list
+
+block head
+    - var pageTitle = 'Nepaketniki Tours';
+
+block content
+    +-tours-header()
+    +-tours-list()
+    +comments()
+    +footer()

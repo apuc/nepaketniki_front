@@ -1,21 +1,36 @@
 .menu
 	position: fixed
 	background-color: transparent
-	top: 1.5rem
-	left: .5rem
 	z-index: 1000
+	width: 100%
+	
+	.squares
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		width: 25px
+		height: 25px
+		z-index: 1001
+
+	.square
+		width: 7px
+		height: 7px
+
 
 	&--opened
 		height: 100vh
 		background-color: #ffffff
 
 	&__icon
-		margin: .5rem 1rem
-		font-size: 3rem
-		color: #fcd834
+		padding: 1.5rem .5rem
+		
+
+		.square
+			background-color: #fcd834
 
 		&.icon--opened
-			color: #d4d4d4
+			.square
+				background-color: #d4d4d4
 
 	&__list
 		display: block

@@ -4,14 +4,26 @@ mixin comments()
 	+b.comments#comments
 		h2.comments__title Сомневаешься стоит ли путешествовать с нами? <br/> Тогда читай, что пишут о нас
 
-		-
+		script(type='text/javascript').
 			var page = 1
 			var pages = 12
 
+			function prevPage(page) {
+				if(page-1 > 0) {
+					page = page -1
+				}
+			}
+
+			function nextPage(page) {
+				if(page + 1 <= pages) {
+					page = page + 1
+				}	
+			}
+
 		.comments__pagination
-			button.comments__button &lt;
+			button.comments__button#prevPage(onclick='prevPage('+page+')') &lt;
 			span.comments__current-page #{page} из #{pages}
-			button.comments__button.comments__button--active &gt;
+			button.comments__button.comments__button--active#nextPage(onclick='nextPage('+page+')') &gt;
 
 		-
 			var comments = [
