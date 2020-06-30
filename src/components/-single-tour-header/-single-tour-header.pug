@@ -1,0 +1,23 @@
+include ../menu/menu
+include ../header-nav-info/header-nav-info
+include ../search-bar/search-bar
+
+mixin -single-tour-header()
+	+b.-single-tour-header
+		.container
+			+menu()
+			+header-nav-info()
+
+			.-single-tour-header__main
+				+search-bar('как правильно отдыхать')
+				h2.-single-tour-header__title Там где детская мечта может стать явью
+				img(src="assets/images/balloon.png", alt="" class="-single-tour-header__balloon")
+				img(src="assets/images/-single-tour-logo.png", alt="" class="-single-tour-header__logo")
+				p.-single-tour-header__description
+					|Каппадокия - это про волшебство, про осуществление детских мечт. 
+					|Мы полетаем на воздушном шаре, прогуляемся по марсианским пейзажам верхом на лошади, 
+					|попадем в лавку, забитую коврами под потолок, как в “Арабской ночи”, и будем тискать 
+					|милых пёсиков на каждом шагу. Это путешествие точно не станет для вас очередным, 
+					|а скорее превратится в восторг. Ведь что еще можно испытать, когда у тебя над головой 
+					|пролетают 200 воздушных шаров?
+		

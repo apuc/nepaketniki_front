@@ -1,6 +1,10 @@
-mixin -tours-visa(text)
+mixin -tours-visa(text, subText)
 	+b.-tours-visa
 		img(src="assets/images/visa.png", alt="" class="-tours-visa__image")
 
-		p.-tours-visa__text
-			|Виза #{text}
+		.-tours-visa__text
+			p
+				|Виза #{text}
+			if subText
+				p
+					|#{subText}

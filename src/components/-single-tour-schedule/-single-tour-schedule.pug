@@ -1,0 +1,27 @@
+include ../-single-tour-schedule-item/-single-tour-schedule-item
+
+mixin -single-tour-schedule()
+	+b.-single-tour-schedule
+		-
+			var schedule1 = [
+				'полетаем на воздушном шаре среди долин Каппадокии с сотнями других шаров',
+				'прокатимся на лошадях и квадроциклах по Красной и Розовой долине',
+				'посетим самые красивые каньоны, долины и подземный город',
+				'устроим фотосессии и сделаем сотни ярких снимков в разлетающихся платьях на фоне воздушных шаров и в инстамагазине ковров',
+			]
+
+			var schedule2 = [
+				'насладимся сауной и бассейном в лучшем отеле Гереме',
+				'попробуем вкуснейшую турецкую кухню',
+			]
+
+		.-single-tour-schedule__column.-single-tour-schedule__column--left
+			each item in schedule1
+				+-single-tour-schedule-item(item, true)
+
+		
+		.-single-tour-schedule__column.-single-tour-schedule__column--right
+			.-single-tour-schedule__title
+				h3 За четыре дня в <strong>Каппадокии</strong>
+			each item in schedule2
+				+-single-tour-schedule-item(item, true)

@@ -76,7 +76,7 @@
               <p class="secrets-text">Секреты путешествий</p>
             </div>
           </div>
-          <div class="header__traveling"><span class="traveling-text">traveling</span>
+          <div class="header__traveling"><span class="traveling-text">travelling</span>
             <div class="search-bar">
               <input type="text" value="как правильно отдыхать?"/><span class="times"><i class="fa fa-times"></i></span><i class="fa fa-search"></i>
               <div class="triangle"></div>
@@ -340,26 +340,9 @@
     </div>
     <div class="comments" id="comments">
       <h2 class="comments__title">Сомневаешься стоит ли путешествовать с нами? <br/> Тогда читай, что пишут о нас</h2>
-      <script type="text/javascript">
-        var page = 1
-        var pages = 12
-
-        function prevPage(page) {
-          if(page-1 > 0) {
-            page = page -1
-          }
-        }
-
-        function nextPage(page) {
-          if(page + 1 <= pages) {
-            page = page + 1
-          }	
-        }
-
-      </script>
       <div class="comments__pagination">
-        <button class="comments__button" id="prevPage" onclick="prevPage(undefined)">&lt;</button><span class="comments__current-page"> из </span>
-        <button class="comments__button comments__button--active" id="nextPage" onclick="nextPage(undefined)">&gt;</button>
+        <button class="comments__button" id="prevPage">&lt;</button><span class="comments__current-page"><span id='currentPage'></span> из <span id='pages'></span></span>
+        <button class="comments__button comments__button--active" id="nextPage">&gt;</button>
       </div>
       <div class="comments__list">
         <div class="comments-comment upper">
@@ -393,7 +376,7 @@
     </div>
     <div class="footer">
       <div class="footer__container">
-        <div class="footer__text"><span class="traveling-text">traveling</span>
+        <div class="footer__text"><span class="traveling-text">travelling</span>
           <p class="travel-format-text">Открой для себя новый <br />формат путешествий</p>
         </div>
         <div class="footer__contact-info">

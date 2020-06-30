@@ -1,0 +1,21 @@
+mixin -single-tour-plan-item(plan, index)
+	+b.-single-tour-plan-item
+		.-single-tour-plan-item__heading
+			.-single-tour-plan-item__date
+				img(src="assets/images/-single-tour-plan-day-"+(index+1)+'.png', alt="" class=".-single-tour-plan-item__day-logo")
+				.-single-tour-plan-item__date-text
+					p #{plan.date}
+					p #{plan.dateSubtitle}
+			.-single-tour-plan-item__actions
+				p #{plan.actions}
+				p #{plan.actionsSubtitle}
+		.-single-tour-plan-item__description
+			each paragraph in plan.description
+				p.-single-tour-plan-item__description-item
+					|#{paragraph}
+		.-single-tour-plan-item__photos
+			- var photos = [1,2,3,4,5,6]
+
+			each photo, photoIndex in photos
+				.-single-tour-plan-item__photos-item
+					img(src="assets/images/-single-tour-plan-"+(index+1)+'-'+(photoIndex+1)+'.png', alt="" class=".-single-tour-plan-item__photo")

@@ -1,0 +1,34 @@
+include ../-single-tour-schedule-item/-single-tour-schedule-item
+
+mixin -single-tour-includes()
+	+b.-single-tour-includes
+
+		h3.-single-tour-includes__title
+			|В стоимость путешествия включено:
+
+		-
+			var includes1 = [
+				'полёт на воздушном шаре с памятным сертификатом',
+				'проживание в бутик-отеле с шикарной террасой (вид на долины Каппадокии и воздушные шары), по 2 человека в номере',
+				'очень вкусные и сытные завтраки в отеле',
+				'посещение сауны и бассейна в отеле',
+				'поездка на квадроциклах, катание на лошадях по Красной и Розовой Долине',
+			]
+
+			var includes2 = [
+				'походы в самые красивые и инстаграмные локации',
+				'все достопримечательности по маршруту - долины, каньоны, подземные города и музеи под открытым небом',
+				' трансфер из/в аэропорт и все перемещения по программе на микроавтобусе с профессиональным гидом',
+				'красивые фотографии от нас',
+				'тщательно разработанный маршрут путешествия и наша постоянная помощь',
+			]
+
+		.-single-tour-includes__details
+			.-single-tour-includes__column.-single-tour-includes__column--left
+				each item in includes1
+					+-single-tour-schedule-item(item)
+
+			
+			.-single-tour-includes__column.-single-tour-includes__column--right
+				each item in includes2
+					+-single-tour-schedule-item(item)

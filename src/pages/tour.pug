@@ -1,0 +1,25 @@
+extends ../components/layout-default/layout-default
+include ../components/comments/comments
+include ../components/footer/footer
+
+include ../components/-single-tour-header/-single-tour-header
+include ../components/-single-tour-info/-single-tour-info
+include ../components/-single-tour-schedule/-single-tour-schedule
+include ../components/-single-tour-plan/-single-tour-plan
+include ../components/-single-tour-includes/-single-tour-includes
+include ../components/-single-tour-price/-single-tour-price
+include ../components/-single-tour-form/-single-tour-form
+
+block head
+    - var pageTitle = 'Nepaketniki Tour';
+
+block content
+    +-single-tour-header()
+    +-single-tour-info()
+    +-single-tour-schedule()
+    +-single-tour-plan()
+    +-single-tour-includes()
+    +-single-tour-price()
+    +-single-tour-form()
+    +comments()
+    +footer() 

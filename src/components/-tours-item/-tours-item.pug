@@ -2,9 +2,10 @@ include ../tour-logo/tour-logo
 include ../-tours-info/-tours-info
 include ../-tours-description/-tours-description
 
-mixin -tours-item(tour)
+mixin -tours-item(tour, withoutPhoto)
 	+b.-tours-item
-		+tour-logo(tour)
+		if !withoutPhoto
+			+tour-logo(tour)
 		+-tours-info(tour)
 		+-tours-description(tour)
 		

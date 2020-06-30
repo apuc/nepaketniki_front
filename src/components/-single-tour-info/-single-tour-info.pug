@@ -1,0 +1,34 @@
+include ../-tours-info/-tours-info
+include ../-tours-visa/-tours-visa
+
+mixin -single-tour-info()
+	+b.-single-tour-info
+		-
+			var tour = {
+				title: 'Каппадокия', subtitle: '',
+				dates: ['26-27 сентября', '1-4 октября', '8-11 октября'],
+				placesLeft:[5, 5, 5],
+				weather: 'лёгкая, передвижение на микроавтобусе + недолгие пешеходные маршруты, подъемов/спусков не будет. Температура - 28-30 градусов днём и 15 градусов на рассвете и вечером.',
+				places: '12 + 2 организатора (Дима и Маша)',
+				visa: 'в Турцию: не требуется.',
+			}
+
+		.-single-tour-info__dates
+			each date,index in tour.dates
+				.-single-tour-info__date
+					|#{date}
+				.-single-tour-info__placesLeft
+					|осталось #{tour.placesLeft[index]} мест
+
+		.-single-tour-info__text
+			+-tours-visa(tour.visa)
+
+			.-single-tour-info__weather
+				strong
+					|Сложность поездки и погода: 
+				span
+					| #{tour.weather}
+				
+			.-single-tour-info__places
+				span
+					|Количество мест: #{tour.places}

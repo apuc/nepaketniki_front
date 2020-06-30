@@ -1,0 +1,5 @@
+mixin -single-tour-schedule-item(item, baselined)
+	+b.-single-tour-schedule-item(class = baselined?' baselined' : '')
+		img(src="assets/images/-single-tour-schedule-point.png", alt="" class="-single-tour-schedule__point")
+		span
+			|#{item}

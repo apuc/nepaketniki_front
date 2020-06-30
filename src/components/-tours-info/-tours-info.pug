@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin -tours-info(tour)
+mixin -tours-info(tour, datesOnly)
 	+b.-tours-info
 
 		.-tours-info__dates
@@ -8,12 +8,13 @@ mixin -tours-info(tour)
 				p.-tours-info__date
 					|#{date}
 
-		if tour.avia
-			p.-tours-info__price #{tour.price} евро + авиаперелёт
-		else
-			p.-tours-info__price #{tour.price} евро
+		if !datesOnly
+			if tour.avia
+				p.-tours-info__price #{tour.price} евро + авиаперелёт
+			else
+				p.-tours-info__price #{tour.price} евро
 
-		p.-tours-info__discount-price
-			|#{tour.discountPrice} евро - до #{tour.discountLimit}
+			p.-tours-info__discount-price
+				|#{tour.discountPrice} евро - до #{tour.discountLimit}
 
-		+button('Программа тура')
+			+button('Программа тура')

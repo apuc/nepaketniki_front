@@ -1,0 +1,30 @@
+mixin -single-tour-form()
+	+b.-single-tour-form
+
+		.-single-tour-form__column.-single-tour-form__column--wide
+			h3.-single-tour-form__title
+				|Забронируйте место в туре и скорее полетим в Каппадокию!
+
+			p.-single-tour-form__proposition
+				|Смело заполняйте форму и жмите кнопку
+				|“Забронировать место” или напишите нам
+				|в <strong>Instagram</strong> в Direct (@nepaketniki), или в
+				|<strong>Telegram/WhatsApp/Viber</strong> по номеру
+				
+				p.-single-tour-form__number
+					|+38 099 490 24 54
+
+		.-single-tour-form__column.-single-tour-form__column--thin
+			- var inputs = ['имя', 'телефон', 'емаил']
+
+			
+			.-single-tour-form__inputs
+				each input in inputs
+					.-single-tour-form__input
+						if input==='емаил'
+							input(type="email" placeholder='Введите ' + input)
+						else
+							input(type="text" placeholder='Введите ' + input)
+					
+				.-single-tour-form__button
+					button Забронировать место

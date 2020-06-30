@@ -96,7 +96,10 @@
             <p class="-tours-description__weather"><strong>Сложность поездки и погода:</strong> лёгкая, передвижение на микроавтобусе + недолгие пешеходные маршруты, подъемов/спусков не будет. Температура - 28-30 градусов днём и 15 градусов на рассвете и вечером.</p>
             <p class="-tours-description__places">Количество мест: 12 + 2 организатора (Дима и Маша)</p>
             <div class="-tours-visa"><img class="-tours-visa__image" src="assets/images/visa.png" alt=""/>
-              <p class="-tours-visa__text">Виза в Турцию: не требуется.</p>
+              <div class="-tours-visa__text">
+                <p>Виза в Турцию:</p>
+                <p>не требуется.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -126,7 +129,10 @@
             <p class="-tours-description__weather"><strong>Сложность поездки и погода:</strong> средняя, нас ждут спуски и подъемы к пляжам и водопадам, мы стараемся максимально чередовать активности и релакс </p>
             <p class="-tours-description__places">Количество мест: 12 + 2 организатора (Дима и Маша)</p>
             <div class="-tours-visa"><img class="-tours-visa__image" src="assets/images/visa.png" alt=""/>
-              <p class="-tours-visa__text">Виза гражданам Украины, России, Казахстана, Беларуси, стран ЕС виза не требуется</p>
+              <div class="-tours-visa__text">
+                <p>Виза гражданам Украины, России, Казахстана,</p>
+                <p>Беларуси, стран ЕС виза не требуется</p>
+              </div>
             </div>
           </div>
         </div>
@@ -157,7 +163,10 @@
             <p class="-tours-description__weather"><strong>Сложность поездки и погода:</strong> средняя, много пеших прогулок, передвижения между городами на скоростных поездах</p>
             <p class="-tours-description__places">Количество мест: 12 + 2 организатора (Дима и Маша)</p>
             <div class="-tours-visa"><img class="-tours-visa__image" src="assets/images/visa.png" alt=""/>
-              <p class="-tours-visa__text">Виза выдается на 4-5 дней</p>
+              <div class="-tours-visa__text">
+                <p>Виза выдается на</p>
+                <p>4-5 дней</p>
+              </div>
             </div>
           </div>
         </div>
@@ -188,7 +197,10 @@
             <p class="-tours-description__weather"><strong>Сложность поездки и погода:</strong> средняя, нас ждут спуски и подъемы к пляжам и водопадам, мы стараемся максимально чередовать активности и релакс </p>
             <p class="-tours-description__places">Количество мест: 12 + 2 организатора (Дима и Маша)</p>
             <div class="-tours-visa"><img class="-tours-visa__image" src="assets/images/visa.png" alt=""/>
-              <p class="-tours-visa__text">Виза гражданам Украины, России, Казахстана, Беларуси, стран ЕС виза не требуется</p>
+              <div class="-tours-visa__text">
+                <p>Виза гражданам Украины, России, Казахстана,</p>
+                <p>Беларуси, стран ЕС виза не требуется</p>
+              </div>
             </div>
           </div>
         </div>
@@ -219,7 +231,10 @@
             <p class="-tours-description__weather"><strong>Сложность поездки и погода:</strong> Сложность поездки и погода: средняя, много пеших прогулок, передвижения между городами на скоростных поездах</p>
             <p class="-tours-description__places">Количество мест: 12 + 2 организатора (Дима и Маша)</p>
             <div class="-tours-visa"><img class="-tours-visa__image" src="assets/images/visa.png" alt=""/>
-              <p class="-tours-visa__text">Виза выдается на 4-5 дней</p>
+              <div class="-tours-visa__text">
+                <p>Виза выдается на</p>
+                <p>4-5 дней</p>
+              </div>
             </div>
           </div>
         </div>
@@ -250,7 +265,10 @@
             <p class="-tours-description__weather"><strong>Сложность поездки и погода:</strong> лёгкая, передвижение на микроавтобусе + недолгие пешеходные маршруты, подъемов/спусков не будет. Температура - 28-30 градусов днём и 15 градусов на рассвете и вечером.</p>
             <p class="-tours-description__places">Количество мест: 12 + 2 организатора (Дима и Маша)</p>
             <div class="-tours-visa"><img class="-tours-visa__image" src="assets/images/visa.png" alt=""/>
-              <p class="-tours-visa__text">Виза в Турцию: не требуется.</p>
+              <div class="-tours-visa__text">
+                <p>Виза в Турцию:</p>
+                <p>не требуется.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -258,26 +276,9 @@
     </div>
     <div class="comments" id="comments">
       <h2 class="comments__title">Сомневаешься стоит ли путешествовать с нами? <br/> Тогда читай, что пишут о нас</h2>
-      <script type="text/javascript">
-        var page = 1
-        var pages = 12
-
-        function prevPage(page) {
-          if(page-1 > 0) {
-            page = page -1
-          }
-        }
-
-        function nextPage(page) {
-          if(page + 1 <= pages) {
-            page = page + 1
-          }	
-        }
-
-      </script>
       <div class="comments__pagination">
-        <button class="comments__button" id="prevPage" onclick="prevPage(undefined)">&lt;</button><span class="comments__current-page"> из </span>
-        <button class="comments__button comments__button--active" id="nextPage" onclick="nextPage(undefined)">&gt;</button>
+        <button class="comments__button" id="prevPage">&lt;</button><span class="comments__current-page"><span id='currentPage'></span> из <span id='pages'></span></span>
+        <button class="comments__button comments__button--active" id="nextPage">&gt;</button>
       </div>
       <div class="comments__list">
         <div class="comments-comment upper">
@@ -311,7 +312,7 @@
     </div>
     <div class="footer">
       <div class="footer__container">
-        <div class="footer__text"><span class="traveling-text">traveling</span>
+        <div class="footer__text"><span class="traveling-text">travelling</span>
           <p class="travel-format-text">Открой для себя новый <br />формат путешествий</p>
         </div>
         <div class="footer__contact-info">
