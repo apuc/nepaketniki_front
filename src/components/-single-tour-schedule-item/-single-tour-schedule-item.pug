@@ -1,5 +1,18 @@
-mixin -single-tour-schedule-item(item, baselined)
-	+b.-single-tour-schedule-item(class = baselined?' baselined' : '')
+mixin -single-tour-schedule-item(item, baselined, last)
+	-
+		var classes = ''
+		if( baselined ) {
+			if(classes.length !== 0) 
+				classes += ' '
+			classes += 'baselined'
+		}
+		if( last ) {
+			if(classes.length !== 0) 
+				classes += ' '
+			classes += 'last'
+		}
+
+	+b.-single-tour-schedule-item(class = classes)
 		img(src="assets/images/-single-tour-schedule-point.png", alt="" class="-single-tour-schedule__point")
 		span
 			|#{item}

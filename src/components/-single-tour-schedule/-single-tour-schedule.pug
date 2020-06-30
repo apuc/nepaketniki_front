@@ -23,5 +23,8 @@ mixin -single-tour-schedule()
 		.-single-tour-schedule__column.-single-tour-schedule__column--right
 			.-single-tour-schedule__title
 				h3 За четыре дня в <strong>Каппадокии</strong>
-			each item in schedule2
-				+-single-tour-schedule-item(item, true)
+			each item, index in schedule2
+				if index===1
+					+-single-tour-schedule-item(item, true, true)
+				else
+					+-single-tour-schedule-item(item, true)

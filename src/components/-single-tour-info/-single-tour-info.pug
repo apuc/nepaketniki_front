@@ -10,7 +10,8 @@ mixin -single-tour-info()
 				placesLeft:[5, 5, 5],
 				weather: 'лёгкая, передвижение на микроавтобусе + недолгие пешеходные маршруты, подъемов/спусков не будет. Температура - 28-30 градусов днём и 15 градусов на рассвете и вечером.',
 				places: '12 + 2 организатора (Дима и Маша)',
-				visa: 'в Турцию: не требуется.',
+				visa: 'в Турцию:',
+				visaSubtitle: 'не требуется.',
 			}
 
 		.-single-tour-info__dates
@@ -21,7 +22,7 @@ mixin -single-tour-info()
 					|осталось #{tour.placesLeft[index]} мест
 
 		.-single-tour-info__text
-			+-tours-visa(tour.visa)
+			+-tours-visa(tour.visa, tour.visaSubtitle)
 
 			.-single-tour-info__weather
 				strong
