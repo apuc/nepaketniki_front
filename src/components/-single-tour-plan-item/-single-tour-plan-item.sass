@@ -50,3 +50,99 @@
 
 		&-item
 			margin-right: 2px
+
+@media screen and ( max-width: 1068px )
+	.-single-tour-plan-item
+
+		&__heading, &__description
+			width: 760px
+
+		&__photos
+			width: 760px
+			justify-content: space-around
+
+			&-item
+				margin-bottom: 2rem
+
+@media screen and ( max-width: 900px )
+	.-single-tour-plan-item
+
+		&__heading,
+			width: 640px
+			font-size: 16px
+			flex-direction: column
+			align-items: center
+
+		&__date
+			&-text
+				font-size: 16px
+
+		&__actions
+			margin-top: 2rem
+			font-size: 15px
+			width: 50%
+			text-align: center
+
+		&__description
+			width: 640px
+
+			&-item
+				font-size: 16px
+
+
+		&__photos
+			width: 640px
+
+			&-item
+				img
+					width: 280px
+					height: 360px
+
+@media screen and ( max-width: 676px )
+	.-single-tour-plan-item
+
+		&__heading,
+			width: 420px
+
+		&__date
+			width: 100%
+
+			&-text
+				font-size: 15px
+
+		&__actions
+			width: 100%
+			font-size: 15px
+			font-weight: 500
+		
+		&__description
+			width: 420px
+
+			&-item
+				font-size: 15px
+
+		&__photos
+			width: 420px
+
+			&-item
+				img
+					width: 200px
+					height: 250px
+
+@media screen and ( max-width: 500px )
+	.-single-tour-plan-item
+
+		&__heading, &__description
+			width: 280px
+
+		&__date
+			&-text
+				font-size: 13px
+
+		&__photos
+			width: 280px
+
+			&-item
+				img
+					width: 280px
+					height: 370px

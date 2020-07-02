@@ -5,29 +5,35 @@
 	&__title
 		text-align: center
 		color: #4f4f4f
-		font-size: 2.3rem
-		font-family: 'GT Eesti Pro Display', 'monospace'
+		font-size: 36px
+		font-family: 'GT Eesti Pro Display', 'sans-serif'
 		font-weight: 700
 
 	&__pagination
 		margin-top: 5rem
 		display: flex
 		justify-content: center
+		align-items: center
 
 	&__button
-		border-radius: 50%
-		height: 3rem
-		width: 3rem
-		font-size: 1.2rem
-		background-color: #fbfbfb
+		height: 31px
+		width: 31px
+		background-image: url('../images/comments-button-arrow.png')
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
 		border: none
 		outline: none
+		border-radius: 50%
 
 		&:hover,&--active
-			background-color: #fcda3a
+			background-image: url('../images/comments-button-arrow-active.png')
+
+		&--active
+			transform: scale(-1, 1)
 
 	&__current-page
-		padding: 1rem
+		padding: 1rem 2rem
 		color: #515050
 		font-size: .9rem
 		font-family: 'Muller', 'serif'

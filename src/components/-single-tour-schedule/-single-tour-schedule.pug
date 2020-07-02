@@ -14,8 +14,10 @@ mixin -single-tour-schedule()
 				'насладимся сауной и бассейном в лучшем отеле Гереме',
 				'попробуем вкуснейшую турецкую кухню',
 			]
-
+		
 		.-single-tour-schedule__column.-single-tour-schedule__column--left
+			.-single-tour-schedule__title--mobile
+				h3 За четыре дня в <strong>Каппадокии</strong>
 			each item in schedule1
 				+-single-tour-schedule-item(item, true)
 

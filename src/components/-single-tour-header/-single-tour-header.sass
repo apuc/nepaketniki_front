@@ -42,3 +42,129 @@
 		color: #515050
 		font-family: 'GT Eesti Pro Display', 'monospace'
 		font-weight: 300
+
+@media screen and (max-width: 1068px)
+	.-single-tour-header
+		background-image: url('../images/-single-tour-header-mid-bg.png')
+
+		.search-bar
+			margin-top: 0
+
+		&__main
+			margin-top: 0
+			padding: 0 2rem
+			width: 760px
+
+		&__balloon
+			right: -1.5rem
+
+		&__logo
+			width: 760px
+			height: 87px
+
+
+@media screen and (max-width: 900px)
+	.-single-tour-header
+		
+		.search-bar
+			display: none
+
+		&__main
+			width: 660px
+
+		&__title
+			font-size: 32px
+
+		&__logo
+			width: 600px
+			height: 70px
+			margin-top: 6rem
+
+@media screen and (max-width: 776px)
+	.-single-tour-header
+		&__title
+			margin-left: 0
+		&__balloon
+			top: initial
+	
+@media screen and (max-width: 676px)
+	.-single-tour-header
+		background-image: url('../images/-single-tour-header-min-bg.png')
+		background-position: top right
+		
+		&__main
+			padding: 3rem 0 0 0
+			width: 420px
+		&__title
+			width: 280px
+			font-size: 25px
+		&__balloon
+			width: 125px
+			height: 160px
+			right: -3rem
+		&__logo
+			width: 420px
+			height: 55px
+			margin-top: 3rem
+		&__description
+			font-size: 16px
+
+@media screen and (max-width: 500px)
+	.-single-tour-header
+		&__main
+			width: 360px
+		&__title
+			width: 240px
+			font-size: 22px
+			margin-top: 1rem
+		&__logo
+			width: 360px
+			height: 45px
+		&__description
+			width: 90%
+			margin: 1.5rem auto 0 auto
+			font-size: 14px
+			text-align: center
+
+		.search-bar
+			display: flex
+			margin-top: 2.5rem
+
+			input, i
+				padding: .2rem .5rem
+
+			input
+				border-width: 5px
+				width: 14rem
+				background-color: #ffffff
+				font-size: .7rem
+
+			i
+				border: 5px solid #ffda4a
+				font-size: .8rem
+				margin-left: -30px
+				background-color: #ffffff
+
+			.times
+				position: absolute
+				height: 30px
+				top: 5px
+				left: 200px
+
+			.triangle
+				border: 15px solid transparent
+				border-left: 15px solid #ffda4a
+
+
+@media screen and (max-width: 400px)
+	.-single-tour-header
+		&__main
+			width: 280px
+		&__logo
+			width: 295px
+			height: 35px
+		&__balloon
+			top: 8rem
+			right: -3rem
+			width: 65px
+			height: 90px

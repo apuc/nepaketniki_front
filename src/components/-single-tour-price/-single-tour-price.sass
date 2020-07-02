@@ -59,8 +59,6 @@
 				font-family: 'GT Eesti Pro Display', 'monospace'
 				font-weight: 400
 
-
-
 	&__payment
 		font-size: 19px
 		font-family: 'GT Eesti Pro Display', 'monospace'
@@ -82,3 +80,68 @@
 
 			strong
 				font-weight: 700
+
+@media screen and ( max-width: 1068px )
+	.-single-tour-price
+		width: 760px
+
+		&__main
+			width: 240px
+
+		&__person, &__cost, &__discount, &__payment
+			font-size: 16px
+
+		&__additional
+			ul
+				li
+					font-size: 16px
+
+		&__how-to
+			h3, p
+				font-size: 16px
+
+		&__discount
+			width: 200px
+
+		&__addiional
+			padding-right: 0
+
+@media screen and ( max-width: 900px )
+	.-single-tour-price
+		width: 600px
+		flex-direction: column
+		align-items: center
+	
+@media screen and ( max-width: 676px )
+	.-single-tour-price
+		width: 420px
+
+		&__additional
+			text-align: center
+			padding-left: 0
+			padding-right: 0
+
+			ul
+				li
+					font-weight: 200
+
+		&__how-to
+			p
+				line-height: 20px
+				font-weight: 200
+
+@media screen and ( max-width: 500px )
+	.-single-tour-price
+		width: 280px
+
+		&__person, &__cost, &__discount, &__payment
+			font-size: 15px
+
+		&__additional
+			ul
+				li
+					font-size: 15px
+
+		&__how-to
+			h3, p
+				font-size: 15px
