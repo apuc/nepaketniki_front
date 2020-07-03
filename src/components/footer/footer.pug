@@ -1,9 +1,9 @@
 include ../contacts/contacts
 include ../search-bar/search-bar
 
-mixin footer()
+mixin footer(short)
 
-	+b.footer
+	+b.footer(class=short?'short':'')
 
 		.footer__container
 			.footer__text

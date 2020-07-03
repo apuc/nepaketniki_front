@@ -1,0 +1,172 @@
+.-reviews-instagram
+	padding-left: 5rem
+	width: 70%
+	height: 400px
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+	&__heading
+		display: flex
+		justify-content: flex-start
+
+		h3
+			width: 430px
+			margin-left: 2rem
+			color: #4f4f4f
+			font-size: 30px
+			font-family: 'GT Eesti Pro Display'
+			font-weight: 700
+
+			img
+				margin-left: 1.5rem
+
+			a
+				display: inline-block
+				color: #c1c1c1
+				font-size: 14px
+				vertical-align: middle
+				font-family: 'Muller', 'sans-serif'
+				font-weight: 400
+				margin-bottom: 3px solid #c1c1c1
+
+	&__icon
+		display: block
+		margin-top: .4rem
+		height: 43px
+		width: 55px
+
+	&__account
+		display: flex
+		flex-direction: column
+		margin-top: 3rem
+
+		&-heading
+			display: flex
+
+	&__avatar
+		height: 136px
+		width: 136px
+
+	&__main
+		margin-left: 3rem
+
+	&__login
+		display: flex
+		justify-content: flex-start
+		
+		h4
+			font-size: 28px
+			font-family: 'Segoe UI'
+			font-weight: 300
+			margin-bottom: 20px
+
+	&__points
+		padding: .5rem 1rem
+
+	&__info
+		display: flex
+		margin-bottom: 20px
+
+		span
+			display: block
+			margin-right: 2rem
+			font-size: 16px
+			font-family: 'Segoe UI'
+			font-weight: 300
+
+			strong
+				font-weight: 700
+
+	&__description
+		margin-left: 184px
+		margin-top: -2rem
+
+		h5
+			font-family: 'Segoe UI'
+			font-weight: 700
+		ul
+			li
+				list-style: none
+				line-height: 22px
+				font-size: 16px
+				font-family: 'Segoe UI'
+				font-weight: 300
+
+				a
+					text-decoration: none
+					color: #00386b
+
+	&__site
+		text-decoration: none
+		font-family: 'Segoe UI'
+		font-weight: 700
+
+
+@media screen and ( max-width: 1100px )
+	.-reviews-instagram
+		width: 90%
+		align-items: center
+		padding-left: 0
+
+		&__heading
+			margin-top: 3rem
+
+		&__account
+			margin-top: 1rem
+
+
+@media screen and ( max-width: 900px )
+	.-reviews-instagram
+		&__description
+			margin-top: -1rem
+
+
+@media screen and ( max-width: 676px )
+	.-reviews-instagram
+		&__heading
+			h3
+				width: 280px
+				font-size: 25px
+
+				span
+					display: block
+
+				img
+					margin-left: 0
+
+		&__account
+
+		&__avatar
+			height: 90px
+			width: 90px
+
+		&__main
+			margin-left: 1.5rem
+
+		&__info
+			display: none
+
+		&__description
+			margin-left: 138px
+
+			ul
+				li
+					line-height: 20px
+					font-size: 14px
+
+@media screen and ( max-width: 500px )
+	.-reviews-instagram
+		height: initial
+
+		&__heading
+			h3
+				width: 200px
+
+		&__login
+			flex-direction: column
+
+		&__description
+			margin-left: 0
+			margin-top: 1rem
+

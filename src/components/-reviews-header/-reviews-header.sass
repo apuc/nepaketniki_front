@@ -1,0 +1,54 @@
+.-reviews-header
+	display: block
+	background-image: url('../images/-single-tour-header-bg.png')
+	background-repeat: no-repeat
+	background-position: center
+	height: 400px
+	margin-bottom: -5rem
+
+	&__main
+		width: 873px
+		margin: 0 auto
+		padding-left: 20px
+
+	&__title
+		margin-top: 5rem
+		color: #4f4f4f
+		font-size: 36px
+		font-family: 'GT Eesti Pro Display', 'sans-serif'
+		font-weight: 700
+
+
+@media screen and (max-width: 1068px)
+	.-reviews-header
+		&__main
+			width: 600px
+		&__title
+			margin-top: 3rem
+			font-size: 32px
+
+@media screen and (max-width: 676px)
+	.-reviews-header
+		height: 348px
+		background-image: url('../images/-single-tour-header-min-bg.png')
+		background-position: top right
+		margin-bottom: -15rem
+		&__main
+			width: 480px
+		&__title
+			margin-top: 0
+			padding-top: 5rem
+			font-size: 25px
+			margin-left: -.3rem
+
+@media screen and (max-width: 500px)
+	.-reviews-header
+		&__main
+			width: 300px
+		&__title
+			padding-top: 2rem
+
+@media screen and (max-width: 400px)
+	.-reviews-header
+		&__title
+			padding-top: 3.5rem

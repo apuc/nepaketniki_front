@@ -1,0 +1,14 @@
+extends ../components/layout-default/layout-default
+include ../components/-reviews-header/-reviews-header
+include ../components/-reviews/-reviews
+include ../components/comments/comments
+include ../components/footer/footer
+
+block head
+    - var pageTitle = 'Nepaketniki Reviews';
+
+block content
+    +-reviews-header()
+    +comments(true)
+    +-reviews()
+    +footer(true)

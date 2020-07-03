@@ -1,0 +1,15 @@
+include ../menu/menu
+include ../header-nav-info/header-nav-info
+include ../search-bar/search-bar
+
+mixin -reviews-header()
+	+b.-reviews-header
+		.container
+			+menu()
+			+header-nav-info()
+
+			.-reviews-header__main
+				+search-bar('как правильно отдыхать')
+				h2.-reviews-header__title
+					|Сомневаешься стоит ли путешествовать с нами? <br/> Тогда читай, что пишут о нас
+

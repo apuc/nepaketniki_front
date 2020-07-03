@@ -1,8 +1,10 @@
 include ../comments-comment/comments-comment
 
-mixin comments()
+mixin comments(withoutHeading)
 	+b.comments#comments
-		h2.comments__title Сомневаешься стоит ли путешествовать с нами? <br/> Тогда читай, что пишут о нас
+	
+		if !withoutHeading
+			h2.comments__title Сомневаешься стоит ли путешествовать с нами? <br/> Тогда читай, что пишут о нас
 
 		.comments__pagination
 			button.comments__button#prevPage

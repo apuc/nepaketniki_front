@@ -1,0 +1,15 @@
+include ../button/button
+include ../-reviews-instagram/-reviews-instagram
+
+mixin -reviews()
+	+b.-reviews
+		.-reviews__proposition
+			p.-reviews__proposition-text
+				|Вы можете путешествовать вместе с нами онлайн - в сториз и постах нашего 
+				| <a href="/">блога в Инстаграм</a>, 
+				|а можете отправиться в незабываемое приключение вместе с нами.
+			+button('Подписаться')
+
+		+-reviews-instagram()
+
+		

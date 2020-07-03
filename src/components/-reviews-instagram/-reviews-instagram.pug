@@ -1,0 +1,36 @@
+include ../-reviews-button/-reviews-button
+
+mixin -reviews-instagram()
+	+b.-reviews-instagram
+		.-reviews-instagram__heading
+			img(src="assets/images/reviews-icon.png", alt="" class="-reviews-instagram__icon")
+			h3
+				|<span>Все отзывы вы можете также посмотреть на</span>
+				|<img src="assets/images/reviews-insta-icon.png" />
+				|<a href="/">nepaketniki</a>
+		.-reviews-instagram__account
+
+			.-reviews-instagram__account-heading
+				img(src="assets/images/reviews-insta-avatar.png", alt="" class="-reviews-instagram__avatar")
+				
+				.-reviews-instagram__main
+					.-reviews-instagram__login
+						h4 nepaketniki
+						+-reviews-button('Подписаться')
+						+-reviews-button('▼', true)
+						.-reviews-instagram__points.tablet-hidden
+							img(src="assets/images/reviews-points.png", alt="")
+					.-reviews-instagram__info
+						span <strong>260</strong> публикаций
+						span <strong>28,6тыс.</strong> подписчиков
+						span <strong>430</strong> подписок
+
+			.-reviews-instagram__description
+				h5
+					|#{'NEPAKETNIKI▫️DIMA&MASHA▫️BALI'}
+				ul
+					li ▫️Карантиним в раю <img src="assets/images/reviews-umbrella.png" />
+					li ▫️Строим совместный бизнес в путешествиях
+					li ▫️Делаем незабываемые туры за вас и для вас <a href="/">@nepaketniki.tours</a>
+					li 🍁Тур🇯🇵Япония 12.11-20.11
+					li <a class="-reviews-instagram__site" href="/">www.nepaketniki.com/japan-november</a>
