@@ -30,16 +30,16 @@ function openMenu() {
     menuIsOpened = true;
 }
 
-function closeMenu() {
+function closeMenu(mode) {
     menu.style.display = 'none';
     menuNav.style.display = 'flex';
     menuIsOpened = false;
-    closeList();
+    closeList(mode);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     if(window.innerWidth > 676) {
-        closeMenu()
+        closeMenu(false)
     } else {
         menu.style.display = 'block';
         menuNav.style.display = 'none';
@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize', () => {
     if(menuIsOpened && window.innerWidth > 676) {
-        closeMenu(false)
+        closeMenu(menuListIsOpened)
     } else if (!menuIsOpened && window.innerWidth <= 676) {
-        openMenu(false)
+        openMenu()
     }
 })
 
