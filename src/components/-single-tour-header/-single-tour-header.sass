@@ -32,12 +32,18 @@
 		right: 0
 
 	&__logo
-		width: 873px
-		height: 101px
+		width: 90%
 		margin: 2rem auto 0 auto
 
+		img
+			display: block
+			max-width: 100%
+			max-height: 101px
+			margin: 0 auto
+
 	&__description
-		margin-top: 3rem
+		width: 873px
+		margin: 3rem auto 0 auto
 		font-size: 18px
 		color: #515050
 		font-family: 'GT Eesti Pro Display', 'monospace'
@@ -57,11 +63,9 @@
 
 		&__balloon
 			right: -1.5rem
-
-		&__logo
+		
+		&__description
 			width: 760px
-			height: 87px
-
 
 @media screen and (max-width: 900px)
 	.-single-tour-header
@@ -76,9 +80,10 @@
 			font-size: 32px
 
 		&__logo
-			width: 600px
-			height: 70px
 			margin-top: 6rem
+
+		&__description
+			width: 660px
 
 @media screen and (max-width: 776px)
 	.-single-tour-header
@@ -86,6 +91,8 @@
 			margin-left: 0
 		&__balloon
 			top: initial
+		&__description
+			margin-top: 1.5rem
 	
 @media screen and (max-width: 676px)
 	.-single-tour-header
@@ -103,11 +110,10 @@
 			height: 160px
 			right: -3rem
 		&__logo
-			width: 420px
-			height: 55px
 			margin-top: 3rem
 		&__description
 			font-size: 16px
+			width: 420px
 
 @media screen and (max-width: 500px)
 	.-single-tour-header
@@ -118,11 +124,9 @@
 			font-size: 22px
 			margin-top: 1rem
 		&__logo
-			width: 360px
-			height: 45px
+			width: 85%
 		&__description
 			width: 90%
-			margin: 1.5rem auto 0 auto
 			font-size: 14px
 			text-align: center
 
@@ -160,11 +164,9 @@
 	.-single-tour-header
 		&__main
 			width: 280px
-		&__logo
-			width: 295px
-			height: 35px
 		&__balloon
 			top: 8rem
 			right: -3rem
 			width: 65px
 			height: 90px
+			
