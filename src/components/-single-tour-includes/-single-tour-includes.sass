@@ -2,11 +2,9 @@
 	display: block
 	margin: 5rem auto 0 auto
 	width: 1009px
-	height: 627px
-	background-image: url('../images/-single-tour-includes-bg.png')
-	background-repeat: no-repeat
-	background-position: center
-	background-size: cover
+	border-bottom: 5px solid #f5f5f5
+	box-shadow: 0 25px 40px #f7f6f6
+	padding-bottom: 2rem
 
 	&__title
 		font-size: 36px
@@ -51,9 +49,11 @@
 @media screen and ( max-width: 676px )
 	.-single-tour-includes
 		width: 420px
-		height: 840px
 		background-position: right bottom
 		background-size: contain
+
+		.-single-tour-schedule-item
+			margin-left: 0
 
 		&__title
 			font-size: 25px
@@ -71,7 +71,6 @@
 @media screen and ( max-width: 500px )
 	.-single-tour-includes
 		width: 300px
-		height: 820px
 
 		&__column
 			padding-left: 0

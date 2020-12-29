@@ -1,0 +1,10 @@
+mixin -single-tour-section-item(item)
+	+b.-single-tour-section-item
+		.-single-tour-section-item__title
+			h3 #{item.title}
+		.-single-tour-section-item__description
+			p #{item.description}
+		.-single-tour-section-item__photos-wrapper
+			button.-single-tour-section-item__button(id='singleTourSectionPrevPage-'+(index+1))
+			.-single-tour-section-item__photos(id='singleTourSectionPhotos-'+(index+1))
+			button.-single-tour-section-item__button.-single-tour-section-item__button--active(id='singleTourSectionNextPage-'+(index+1))

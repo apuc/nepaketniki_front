@@ -1,0 +1,12 @@
+mixin -business-photos()
+	+b.-business-photos
+		.container
+			.-business-photos__masonry
+				.grid
+					.grid-sizer
+
+					- var items = [1,2,3,4,5,6]
+
+					each item, index in items
+						.grid-item(class=index===1?'grid-item--upper':'')
+							img(src=`assets/images/masonry-${item}.png`, alt="")

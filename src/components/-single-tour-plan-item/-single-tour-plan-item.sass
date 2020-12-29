@@ -1,6 +1,8 @@
 .-single-tour-plan-item
 	display: flex
 	flex-direction: column
+	position: relative
+	padding: 2rem
 
 	&__heading
 		margin: 2.3rem auto 0 auto
@@ -43,13 +45,108 @@
 			font-weight: 300
 
 	&__photos
-		width: 1005px
+		width: 100%
 		display: flex
+		justify-content: center
+		align-items: center
 		flex-wrap: wrap
-		margin: 2.5rem auto 0 auto
+		margin: 0 auto
+
+		&-wrapper
+			width: initial
+			position: relative
+			margin-top: 2.5rem
+			display: flex
+			justify-content: space-between
+			align-items: center
 
 		&-item
 			margin-right: 2px
+			width: 30%
+			height: auto
+
+			img
+				width: 100%
+
+			&.fading-next
+				animation: fading-next .3s forwards ease-out
+	
+			&.fading-prev
+				animation: fading-prev .3s forwards ease-out
+
+			&.appearing-next
+				animation: appearing-next .3s forwards ease-out
+			
+			&.appearing-prev
+				animation: appearing-prev .3s forwards ease-out
+
+	&__button
+		height: 31px
+		width: 31px
+		background-image: url('../images/comments-button-arrow.png')
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		border: none
+		outline: none
+		border-radius: 50%
+		margin: 0 .3rem
+
+		&:hover,&--active
+			background-image: url('../images/comments-button-arrow-active.png')
+
+		&--active
+			transform: scale(-1, 1)
+
+
+@keyframes fading-next
+	0%
+		opacity: 1
+		left: 0
+	100%
+		opacity: 0
+		left: -100px
+		display: none
+
+@keyframes fading-prev
+	0%
+		opacity: 1
+		left: 0px
+	100%
+		opacity: 0
+		left: 100px
+		display: none
+
+@keyframes appearing-next
+	0%
+		display: none
+		opacity: 0
+		left: 100px
+	10%
+		display: flex
+	100%
+		opacity: 1
+		left: 0
+
+@keyframes appearing-prev
+	0%
+		display: none
+		opacity: 0
+		left: -100px
+	10%
+		display: flex
+	100%
+		opacity: 1
+		left: 0
+
+@media screen and ( max-width: 1200px )
+	.-single-tour-plan-item
+		&__photos
+			width: 900px
+	
+			&-wrapper
+				width: 1000px
+	
 
 @media screen and ( max-width: 1068px )
 	.-single-tour-plan-item
@@ -60,6 +157,9 @@
 		&__photos
 			width: 760px
 			justify-content: space-around
+
+			&-wrapper
+				width: 840px
 
 			&-item
 				margin-bottom: 2rem
@@ -92,6 +192,9 @@
 
 		&__photos
 			width: 640px
+			
+			&-wrapper
+				width: 720px
 
 			&-item
 				img
@@ -123,6 +226,9 @@
 
 		&__photos
 			width: 420px
+			
+			&-wrapper
+				width: 500px
 
 			&-item
 				img
@@ -141,6 +247,11 @@
 
 		&__photos
 			width: 280px
+			
+			&-wrapper
+				
+				button
+					display: none
 
 			&-item
 				img

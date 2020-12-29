@@ -1,0 +1,131 @@
+.-about-header
+	display: block
+	position: relative
+	background-image: url('../images/header-bg.png')
+	background-repeat: no-repeat
+	background-position: center
+	height: 706px
+	margin-bottom: 1rem
+
+	&__main
+		display: flex
+		height: 600px
+
+	&__text
+		width: 50%
+		padding-left: 9%
+
+	&__author-tours
+		margin-top: 1.5rem
+		color: #b3b2b2
+		width: 320px
+		font-size: 15px
+		font-family: 'GT Eesti Pro Display', 'monospace'
+		font-weight: 400
+
+		strong
+			font-weight: bold
+			font-family: 'GT Eesti Pro Display', 'monospace'
+			font-weight: 700
+
+
+	&__travel-format-text
+		margin: 7rem 0 3rem 0
+		color: #4f4f4f
+		width: 420px
+		font-size: 2.2rem
+		font-family: 'GT Eesti Pro Display', 'monospace'
+		font-weight: 700
+
+		&.maxed
+			font-size: 70px
+	
+	.contacts__phone
+		i
+			box-shadow: -5px 5px 12px #ffbb29
+
+	&__traveling
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		margin-left: 4rem
+		height: 600px
+
+		.traveling-text
+			margin-left: 40px
+
+@media screen and ( max-width: 1200px )
+	.-about-header
+		&__traveling
+			display: none
+
+@media screen and ( max-width: 1068px )
+	.-about-header
+		&__text
+			margin-left: 1rem
+
+@media screen and ( max-width: 768px )
+	.-about-header
+		background-position: initial
+		
+		&__main
+			flex-direction: column
+			align-items: center
+
+		&__text
+			margin-left: 0
+			padding-left: 0
+
+		&__travel-format-text
+			margin-top: 3rem
+
+		.contacts__number
+			p
+				color: #d4d4d4
+
+			i
+				box-shadow: -5px 5px 12px #bebebe
+
+@media screen and ( max-width: 676px )
+	.-about-header
+		&__text
+			width: initial
+
+		&__author-tours
+			margin-top: 2rem
+	
+
+@media screen and ( max-width: 500px )
+	.-about-header
+		background-image: url('../images/header-min-bg-500.png')
+		height: 600px
+
+		&__author-tours
+			margin-top: 5.5rem
+			margin-left: -4px
+			width: 132px
+			font-size: 12px
+
+		&__travel-format-text
+			margin-top: 1.4rem
+			margin-left: 0
+			width: 145px
+			font-size: 18px
+
+		&__proposition-text
+			overflow: hidden
+			text-overflow: ellipsis
+			margin-top: 2rem
+			margin-left: 0
+			width: 165px
+			height: 90px
+			font-size: 14px
+
+		
+@media screen and ( max-width: 400px )
+	.-about-header
+		background-image: url('../images/header-min-bg-400.png')
+
+@media screen and ( max-width: 320px )
+	.-about-header
+		background-image: url('../images/header-min-bg.png')

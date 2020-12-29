@@ -13,9 +13,8 @@ mixin -single-tour-plan-item(plan, index)
 			each paragraph in plan.description
 				p.-single-tour-plan-item__description-item
 					|#{paragraph}
-		.-single-tour-plan-item__photos
-			- var photos = [1,2,3,4,5,6]
-
-			each photo, photoIndex in photos
-				.-single-tour-plan-item__photos-item
-					img(src="assets/images/-single-tour-plan-"+(index+1)+'-'+(photoIndex+1)+'.png', alt="" class=".-single-tour-plan-item__photo")
+					
+		.-single-tour-plan-item__photos-wrapper
+			button.-single-tour-plan-item__button(id='singleTourPlanPrevPage-'+(index+1))
+			.-single-tour-plan-item__photos(id='singleTourPlanPhotos-'+(index+1))
+			button.-single-tour-plan-item__button.-single-tour-plan-item__button--active(id='singleTourPlanNextPage-'+(index+1))

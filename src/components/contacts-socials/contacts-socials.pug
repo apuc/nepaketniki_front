@@ -1,8 +1,9 @@
 mixin contacts-socials()
 	+b.contacts-socials
-		each value in ['1', '2', '3']
+		each value, index in ['1', '2', '3', '4']
 			.social
-				img(src='assets/images/social-'+value+'.png')
-				.social--inner-hover
+				a(href="/")
+					img(src='assets/images/social-'+(index+1)+'.png')
+					.social--inner-hover
 		block
 

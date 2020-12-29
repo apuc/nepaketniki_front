@@ -1,0 +1,21 @@
+include ../-single-tour-section-item/-single-tour-section-item
+
+mixin -single-tour-section()
+	+b.-single-tour-section
+		.container
+			#singleTourSection
+
+				-
+					var items = [
+						{ title: 'AAAAA', description: 'Lorem ipsum aaaaaa', images: [
+							'assets/images/comment-1.png',
+							'assets/images/comment-2.png',
+						]},
+						{ title: 'BBBBBBBBB', description: 'Lorem ipsum bbbbbbbbb', images: [
+							'assets/images/comment-3.png',
+							'assets/images/comment-1.png',
+						]},
+					]
+
+				each item in items
+					+-single-tour-section-item(item)

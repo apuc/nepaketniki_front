@@ -1,0 +1,14 @@
+extends ../components/layout-default/layout-default
+include ../components/-about-header/-about-header
+include ../components/-about/-about
+include ../components/comments/comments
+include ../components/footer/footer
+
+block head
+    - var pageTitle = 'About us';
+
+block content
+    +-about-header('Открой для себя новый формат путешествий')
+    +-about()
+    +comments()
+    +footer()

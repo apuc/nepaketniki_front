@@ -1,0 +1,8 @@
+extends ../components/layout-default/layout-default
+include ../components/-notfound/-notfound
+
+block head
+    - var pageTitle = 'Page not found';
+
+block content
+    +-notfound()

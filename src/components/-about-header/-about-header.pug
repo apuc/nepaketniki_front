@@ -1,0 +1,20 @@
+include ../header-nav-info/header-nav-info
+include ../menu/menu
+include ../search-bar/search-bar
+
+mixin -about-header(text, maxed)
+	+b.-about-header
+
+		+menu()
+		.container
+
+			+header-nav-info()
+
+			.-about-header__main
+				.-about-header__text
+					p.-about-header__author-tours <strong>Мы создаём авторские туры</strong> в самые красивые места нашей планеты - <br />Бали, Японию, Эльзас, Каппадокию. 
+					h2.-about-header__travel-format-text(class=maxed?'maxed':'') #{text}
+
+				.-about-header__traveling
+					span.traveling-text travelling
+					+search-bar('как правильно отдыхать?')

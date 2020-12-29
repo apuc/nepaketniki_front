@@ -1,0 +1,77 @@
+.-single-tour-section-item
+	margin-top: 4rem
+	display: flex
+	flex-direction: column
+	position: relative    
+
+	&__title
+		margin: 1rem auto 0 auto
+		width: 873px
+
+		h3
+			text-align: center
+			font-size: 34px
+			font-family: 'GT Eesti Pro Display'
+			font-weight: 700
+
+	&__description
+		margin: 2rem auto 0 auto
+		width: 873px
+
+		p
+			font-size: 19px
+			font-family: 'GT Eesti Pro Display'
+			font-weight: 500
+
+	&__photos
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		margin: 0 auto
+
+		&-wrapper
+			width: initial
+			position: relative
+			margin: 2.5rem auto 0 auto
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+		&-item
+			margin-right: 2px
+			width: 30%
+			height: auto
+			
+			img
+				width: 100%
+
+			&.fading-next
+				animation: fading-next .3s forwards ease-out
+	
+			&.fading-prev
+				animation: fading-prev .3s forwards ease-out
+
+			&.appearing-next
+				animation: appearing-next .3s forwards ease-out
+			
+			&.appearing-prev
+				animation: appearing-prev .3s forwards ease-out
+
+	&__button
+		height: 31px
+		width: 31px
+		background-image: url('../images/comments-button-arrow.png')
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		border: none
+		outline: none
+		border-radius: 50%
+		margin: 0 .3rem
+
+		&:hover,&--active
+			background-image: url('../images/comments-button-arrow-active.png')
+
+		&--active
+			transform: scale(-1, 1)
+

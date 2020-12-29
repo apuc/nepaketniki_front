@@ -1,0 +1,16 @@
+extends ../components/layout-default/layout-default
+include ../components/-about-header/-about-header
+include ../components/-business/-business
+include ../components/-business-photos/-business-photos
+include ../components/comments/comments
+include ../components/footer/footer
+
+block head
+    - var pageTitle = 'Для бизнеса';
+
+block content
+    +-about-header('Для бизнеса', true)
+    +-business()
+    +-business-photos()
+    +comments()
+    +footer()
